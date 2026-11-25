@@ -66,3 +66,12 @@ joke about hackers, which is not a support joke).
   entries that will lean on "turn it off and on again".
 - **101 characters, one sentence, spoken directly to the customer**
   ("Your ticket…"), clean dialogue voice.
+
+## Verification
+
+`python3 main.py` writes exactly this line plus a newline to
+`/output/entry.txt`; re-running produces byte-identical output
+(sha256 `96d9b97f0c618b80d54ff05af4c6ea6477f220edde5e97dc1b5191c9a492405b`).
+The program is deterministic — no network, no randomness, no clock, no
+environment input — and asserts the line is a single line under 200
+characters before writing it.
